@@ -34,7 +34,7 @@ int main()
     dict[0].value = "Fizz";
     dict[1].key = 5;
     dict[1].value = "Buzz";
-	char* output;
+    char* output;
     for (int i = 1; i <= 100; i++) {
         output = "";
         for ( int j = 0; j < sizeof dict / sizeof dict[0]; j++ ) {
@@ -45,7 +45,7 @@ int main()
         if (output == "") {
            output = itoa(i);
         }
-		printf("%s\n", output);
+        printf("%s\n", output);
     }
     return 0
 }
