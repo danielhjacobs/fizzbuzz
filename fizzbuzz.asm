@@ -5,14 +5,14 @@
 .text
 main:
 loop:
+    # Exit when t0 > 99 at this point, which will be when t0 > 100 at end of loop
+    bgt $t0,99,exit
     # Print newline every iteration but the first
     bne $t0, $zero, newline
 # After printing a newline, return here
 newline_return:
     # Store 0 in register a0
     li $a0, 0
-    # Exit when t0 > 99 at this point, which will be when t0 > 100 at end of loop
-    bgt $t0,99,exit
     # Add 1 to t0
     addi $t0,$t0,1
     # Store 3 in register s0
