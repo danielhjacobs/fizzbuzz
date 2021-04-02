@@ -4,6 +4,10 @@
     Newline: .asciiz "\n"
 .text
 main:
+    # Store 3 in register s0
+    li $s0, 3
+    # Store 5 in register s1
+    li $s1, 5
 loop:
     # Exit when t0 > 99 at this point, which will be when t0 > 100 at end of loop
     bgt $t0,99,exit
@@ -15,16 +19,12 @@ newline_return:
     li $a0, 0
     # Add 1 to t0
     addi $t0,$t0,1
-    # Store 3 in register s0
-    li $s0, 3
     # Divide t0 by s0
     div $t0, $s0
     # Store the remainder in t1
     mfhi $t1
-    # Store 5 in register s0
-    li $s0, 5
-    # Divide t0 by s0
-    div $t0, $s0
+    # Divide t0 by s1
+    div $t0, $s1
     # Store the remainder in t2
     mfhi $t2
     # If t0 % 3 == 0, print Fizz
