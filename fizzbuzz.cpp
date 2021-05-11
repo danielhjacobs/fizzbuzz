@@ -14,7 +14,7 @@ int main() {
             if (i % item.first == 0) { output += item.second; }
         }
         if (output == "") { output = std::to_string(i); }
-        std::cout<<output<<std::endl;
+        std::cout << output << std::endl;
     }
     return 0;
 }
