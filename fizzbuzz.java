@@ -10,7 +10,7 @@ public class FizzBuzz {
         dict.put(5, "Buzz");
         for (int i = 1; i <= 100; i++) {
             output = "";
-			// The set's iterator returns the entries in ascending key order: https://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html#entrySet()
+            // The set's iterator returns the entries in ascending key order: https://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html#entrySet()
             for (Map.Entry<Integer, String> entry : dict.entrySet()) {
                 if (i % entry.getKey() == 0) { output += entry.getValue(); }
 		    }
