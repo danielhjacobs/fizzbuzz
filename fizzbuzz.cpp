@@ -9,7 +9,7 @@ int main() {
     dict[5] = "Buzz";
     for (int i = 1; i <= 100; i++) {
         output = "";
-		// Internally, the elements in a map are always sorted by its key: http://www.cplusplus.com/reference/map/map/
+        // Internally, the elements in a map are always sorted by its key: http://www.cplusplus.com/reference/map/map/
         for ( auto item : dict ) {
             if (i % item.first == 0) { output += item.second; }
         }
