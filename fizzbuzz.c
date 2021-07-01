@@ -29,11 +29,10 @@ char* concat(char* arr1, char* arr2) {
 
 int main()
 {
-    struct Map dict[2];
-    dict[0].key = 3;
-    dict[0].value = "Fizz";
-    dict[1].key = 5;
-    dict[1].value = "Buzz";
+    struct Map dict[2] ={
+        {3, "Fizz"},
+        {5, "Buzz"}
+    };
     char* output;
     for (int i = 1; i <= 100; i++) {
         output = "";
