@@ -11,7 +11,7 @@ struct Map {
 char* itoa(int number) {
     int n = log10(number) + 1;
     int i;
-    char *numberArray = calloc(n, sizeof(char));
+    char *numberArray = malloc(n);
     for (i = n-1; i >= 0; --i, number /= 10)
     {
         numberArray[i] = (number % 10) + '0';
@@ -21,7 +21,7 @@ char* itoa(int number) {
 
 char* concat(char* arr1, char* arr2) {
     int newSize = strlen(arr1)  + strlen(arr2) + 1; 
-    char* newArr = (char *)malloc(newSize);
+    char* newArr = malloc(newSize);
     strcpy(newArr,arr1);
     strcat(newArr,arr2);
     return newArr;
