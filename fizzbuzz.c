@@ -29,7 +29,7 @@ char* concat(char* arr1, char* arr2) {
 
 int main()
 {
-    struct Map dict[2] ={
+    struct Map dict[2] = {
         {3, "Fizz"},
         {5, "Buzz"}
     };
