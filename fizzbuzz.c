@@ -45,6 +45,7 @@ int main()
            output = itoa(i);
         }
         printf("%s\n", output);
+        free(output);
     }
     return 0;
 }
